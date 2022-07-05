@@ -1,0 +1,24 @@
+server {
+  listen $PORT default_server;
+
+  location / {
+    root   /usr/share/nginx/html;
+    index  index.html index.htm;
+  }
+   location /covid19/ {
+         proxy_pass https://data-akamutu-8ta5pacwm-genotechies.vercel.app/;
+    }
+    location /weather/ {
+         proxy_pass https://deshaguna-gavesha-akamutu-mu.vercel.app/;
+    }
+    location /assets/ {
+         proxy_pass https://deshaguna-gavesha-akamutu-mu.vercel.app/assets/;
+    }
+    location /static/ {
+         proxy_pass https://data-akamutu-8ta5pacwm-genotechies.vercel.app/static/;
+   }
+   location ~ ^/weather/.*\.(html|js|css|eot|svg|ttf|woff|woff2|png|gif|ico|jpg|jpeg)$ {
+    try_files $request_uri $request_uri/ =404;
+}
+
+}
