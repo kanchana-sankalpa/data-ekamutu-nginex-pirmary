@@ -9,10 +9,7 @@ server {
          proxy_pass https://data-akamutu-8ta5pacwm-genotechies.vercel.app/;
     }
     location /weather/ {
-         proxy_pass https://deshaguna-gavesha-akamutu-mu.vercel.app/;
-    }
-    location /assets/ {
-         proxy_pass https://deshaguna-gavesha-akamutu-mu.vercel.app/assets/;
+         proxy_pass https://deshaguna-gavesha-akamutu-reverted.vercel.app/;
     }
     location /static/ {
          proxy_pass https://data-akamutu-8ta5pacwm-genotechies.vercel.app/static/;
