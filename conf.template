@@ -2,9 +2,7 @@ server {
   listen $PORT default_server;
 
   location / {
-    root   /usr/share/nginx/html;
-    index  index.html index.htm;
-    try_files $uri $uri/ /index.html;
+    proxy_pass https://akamutuorg.herokuapp.com/;
   }
    location /covid19/ {
          proxy_pass https://data-akamutu-8ta5pacwm-genotechies.vercel.app/;
