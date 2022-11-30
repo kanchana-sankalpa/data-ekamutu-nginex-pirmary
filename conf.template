@@ -15,7 +15,6 @@ server {
     }
     location /contributor/ {
       proxy_pass https://data-akamutu-protal.vercel.app/;
-
     }
 
 }
