@@ -12,6 +12,9 @@ server {
    }
     location /weather/ {
       proxy_pass https://deshaguna-gavesha-akamutu-reverted.vercel.app/;
+    }
+    location /contributor/ {
+      proxy_pass https://data-akamutu-protal.vercel.app/;
 
     }
 
